@@ -48,22 +48,6 @@ iop_device_t **GetDeviceList(void)
     return (dev_list);
 }
 
-int _start(int argc, char **argv)
-{
-    if (RegisterLibraryEntries(&_exp_iomanx) != 0) {
-        return MODULE_NO_RESIDENT_END;
-    }
-
-    memset(dev_list, 0, sizeof(dev_list));
-    memset(file_table, 0, sizeof(file_table));
-
-    // if(hook_ioman() != 0)
-    // {
-    //     return MODULE_NO_RESIDENT_END;
-    // }
-
-    return MODULE_RESIDENT_END;
-}
 
 int shutdown()
 {

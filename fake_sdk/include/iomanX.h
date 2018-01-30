@@ -110,7 +110,7 @@ typedef struct _iop_device
 #define sync iomanx_sync
 #define mount iomanx_mount
 #define umount iomanx_umount
-#define lseek64 iomanx_lseek64
+//#define lseek64 iomanx_lseek64
 #define devctl iomanx_devctl
 #define symlink iomanx_symlink
 #define readlink iomanx_readlink
@@ -181,7 +181,7 @@ int chdir(const char *name);
 int sync(const char *dev, int flag);
 int mount(const char *fsname, const char *devname, int flag, void *arg, int arglen);
 int umount(const char *fsname);
-s64 lseek64(int fd, s64 offset, int whence);
+// s64 lseek64(int fd, s64 offset, int whence);
 int devctl(const char *name, int cmd, void *arg, unsigned int arglen, void *buf, unsigned int buflen);
 int symlink(const char *old, const char *new);
 int readlink(const char *path, char *buf, unsigned int buflen);
